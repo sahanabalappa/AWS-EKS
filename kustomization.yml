@@ -5,8 +5,9 @@ secretGenerator:
      literals:
           - password=redhat
 resources:
-       - pk-efs-provisioner.yaml
-       - pk-rbac.yaml
-       - pk-storage-class.yaml
-       - pk-deploy-mysql.yaml
-       - pk-deploy-joomla.yaml
+       - create_efs_provisioner.yaml
+       - create_rbac.yaml
+       - create_storage_class.yaml
+       - create_sql_deployment.yaml
+       - create_joomla_deployment.yaml
+       
