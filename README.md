@@ -31,7 +31,7 @@ Prerequisites:
 
 Steps to be followed are:
 
-Step1 → Creating an AWS IAM role account.
+# Step1 → Creating an AWS IAM role account.
 
 AWS Identity and Access Management (IAM) is a web service that helps you securely control access to AWS resources. You use IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources.
 
@@ -46,13 +46,23 @@ Command to login in AWS account:
 
 Now give the access key and secret key which you noted down
 
-Step2 → Create EKS Cluster using EKSCTL
+# Step2 → Create EKS Cluster using EKSCTL
 
 So to create EKS Cluster we have to first install EKSCTL and set the path. 
 To create EKS cluster from CLI we need to write a YAML file (Manifest file) which contain all details as what we need.
 
+https://github.com/sahanabalappa/AWS-EKS/blob/master/create_cluster.yml
 
-Step4 →Create EFS Server and install amazon-efs-utils in every worker node/instance.
+Using this command we create a EKS Cluster.
+
+## eksctl create cluster -f create-cluster.yml
+
+# Step3 → Update .kube/ config file
+
+When we update the .kube config file then only kubectl get the access to go in eks cluster. In these config file complete eks cluster information and access is mentioned. Without these  kubectl command can’t go inside the eks cluster and launch the POD in slave node.
+
+
+# Step4 →Create EFS Server and install amazon-efs-utils in every worker node/instance.
 
 Step5 →Deploy Joomla
 
