@@ -74,7 +74,13 @@ For this task I am using EFS (Elastic File System) for persistent storage. After
 # Step5 →Deploy Joomla
 
 In this step run all these YAML file using kustomization.
+https://github.com/sahanabalappa/AWS-EKS/blob/master/kustomization.yml
 
+Run this command to run kustomization yaml file:
+# kubectl create -k path-of-all-yaml-file
+
+After following this steps 
+Joomla successfully deployed. All data of Joomla and MYSQL Database is storing in EFS, If any POD fail client won’t face any downtime.
 
 
 
