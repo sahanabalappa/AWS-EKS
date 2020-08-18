@@ -33,7 +33,24 @@ Steps to be followed are:
 
 Step1 → Creating an AWS IAM role account.
 
+AWS Identity and Access Management (IAM) is a web service that helps you securely control access to AWS resources. You use IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources.
+
+When you first create an AWS account, you begin with a single sign-in identity that has complete access to all AWS services and resources in the account. This identity is called the AWS account root user and is accessed by signing in with the email address and password that you used to create the account.
+
+In this task we have to use admin account to give full power
+once it is done you will get access key and secret key note it done which is used to login to aws using aws cli
+
+Command to login in AWS account:
+
+## aws configure
+
+Now give the access key and secret key which you noted down
+
 Step2 → Create EKS Cluster using EKSCTL
+
+So to create EKS Cluster we have to first install EKSCTL and set the path. 
+To create EKS cluster from CLI we need to write a YAML file (Manifest file) which contain all details as what we need.
+
 
 Step4 →Create EFS Server and install amazon-efs-utils in every worker node/instance.
 
