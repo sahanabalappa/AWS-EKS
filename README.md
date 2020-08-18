@@ -61,9 +61,23 @@ Using this command we create a EKS Cluster.
 
 When we update the .kube config file then only kubectl get the access to go in eks cluster. In these config file complete eks cluster information and access is mentioned. Without these  kubectl command can’t go inside the eks cluster and launch the POD in slave node.
 
+Command to update the config file of kubernetes:
+# aws eks update-kubeconfig
+
 
 # Step4 →Create EFS Server and install amazon-efs-utils in every worker node/instance.
 
-Step5 →Deploy Joomla
+In AWS EFS, aws create a EFS server in all 3 data center because of disaster management. It give high availability, elasticity, scalability and all EBS and S3 limitation can be solve by EFS.
+For this task I am using EFS (Elastic File System) for persistent storage. After NFS server created we have to do some changes in YAML file of efs provisioner(Add system_id and NFS server in efs provisioner file) and then we have to install a package call amazon-efs-utils in every worker nodes/instances. 
+
+
+# Step5 →Deploy Joomla
+
+In this step run all these YAML file using kustomization.
+
+
+
+
+
 
 
