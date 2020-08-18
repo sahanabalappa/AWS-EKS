@@ -62,7 +62,7 @@ Using this command we create a EKS Cluster.
 When we update the .kube config file then only kubectl get the access to go in eks cluster. In these config file complete eks cluster information and access is mentioned. Without these  kubectl command can’t go inside the eks cluster and launch the POD in slave node.
 
 Command to update the config file of kubernetes:
-# aws eks update-kubeconfig
+# aws eks update-kubeconfig in joomla
 
 
 # Step4 →Create EFS Server and install amazon-efs-utils in every worker node/instance.
@@ -77,7 +77,7 @@ In this step run all these YAML file using kustomization.
 https://github.com/sahanabalappa/AWS-EKS/blob/master/kustomization.yml
 
 Run this command to run kustomization yaml file:
-# kubectl create -k path-of-all-yaml-file
+# kubectl create -k path-of-all-yaml-file -n joomla
 
 After following this steps 
 Joomla successfully deployed. All data of Joomla and MYSQL Database is storing in EFS, If any POD fail client won’t face any downtime.
